@@ -1,0 +1,25 @@
+[project]
+name = "rfp-supplier-evaluation"
+version = "0.1.0"
+description = "Evidence-led evaluation and comparison of supplier proposal PDFs"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.38,<2",
+    "langchain>=0.3,<2",
+    "langchain-openai>=0.2,<2",
+    "openai>=1.55,<3",
+    "pydantic>=2.7,<3",
+    "pymupdf>=1.24,<2",
+    "plotly>=5.24,<7",
+    "pandas>=2.2,<4",
+    "python-dotenv>=1.0,<2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
